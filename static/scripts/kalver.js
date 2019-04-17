@@ -3,15 +3,15 @@ function randnum(min, max) {
 }
 
 function revision() {
-    var rand = randnum(0, 4);
+    var rand = randnum(0, 6);
     if (rand == 0) {
         return "";
     }
     else if (rand == 1) {
-        return ` R${randnum(0, 101)}`;
+        return ` R${randnum(0, 101)} RC${randnum(1, 10)}`;
     }
     else {
-        return ` R${randnum(0, 101)} RC${randnum(0, 10)}`;
+        return ` R${randnum(0, 101)}`;
     }
 }
 
