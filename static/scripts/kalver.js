@@ -3,11 +3,14 @@ function randnum(min, max) {
 }
 
 function revision() {
-    if (randnum(0, 2) == 0) {
+    var rand = randnum(0, 4);
+    if (rand == 0) {
         return "";
     }
-    else {
+    else if (rand == 1) {
         return ` R${randnum(0, 101)}`;
+    else {
+        return ` R${randnum(0, 101)} RC${randnum(0, 10)}`;
     }
 }
 
@@ -25,9 +28,18 @@ function patch() {
         return random_string.toUpperCase();
     }
 }
+    
+function download() {
+    if (randnum(0, 11) == 0) {
+        return "-DL";
+    }
+    else {
+        return "";
+    }
+}
 
 window.onload = function() {
     document.getElementById("versionbutton").onclick = function showversion() {
-        document.getElementById("version").innerHTML = `0.${minor()}${patch()}${revision()}`;
+        document.getElementById("version").innerHTML = `0.${minor()}${patch()}${revision()}${download()}`;
     }
 }
