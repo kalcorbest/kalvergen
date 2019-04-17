@@ -9,6 +9,7 @@ function revision() {
     }
     else if (rand == 1) {
         return ` R${randnum(0, 101)}`;
+    }
     else {
         return ` R${randnum(0, 101)} RC${randnum(0, 10)}`;
     }
