@@ -26,7 +26,7 @@ function patch() {
     else {
         let random_ascii = Math.floor((Math.random() * 25) + 97);
         let random_string = String.fromCharCode(random_ascii);
-        return random_string.toUpperCase();
+        return random_string;
     }
 }
     
