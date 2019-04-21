@@ -32,7 +32,7 @@ function patch() {
     
 function download() {
     if (randnum(0, 6) == 0) {
-        if (randnum(0, 5) == 0) {
+        if (randnum(0, 4) == 0) {
             var first = randnum(1, 10);
             var second = randnum(1, 10);
     
