@@ -38,3 +38,19 @@ function download() {
         return "";
     }
 }
+
+function randNumbers() {
+    if (randnum(0, 5) == 0) {
+        var first = randnum(1, 10);
+        var second = randnum(1, 10);
+
+        while (second == first) {
+            second = randnum(0, 10);
+        }
+
+        return `-${first}-${second}`;
+    }
+    else {
+        return "";
+    }
+}
