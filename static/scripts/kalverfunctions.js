@@ -31,24 +31,20 @@ function patch() {
 }
     
 function download() {
-    if (randnum(0, 11) == 0) {
-        return "-DL";
-    }
-    else {
-        return "";
-    }
-}
+    if (randnum(0, 6) == 0) {
+        if (randnum(0, 5) == 0) {
+            var first = randnum(1, 10);
+            var second = randnum(1, 10);
+    
+            while (second == first) {
+                second = randnum(0, 10);
+            }
 
-function randNumbers() {
-    if (randnum(0, 5) == 0) {
-        var first = randnum(1, 10);
-        var second = randnum(1, 10);
-
-        while (second == first) {
-            second = randnum(0, 10);
+            return `-DL-${first}-${second}`;
         }
-
-        return `-${first}-${second}`;
+        else {
+            return "-DL";
+        }
     }
     else {
         return "";
